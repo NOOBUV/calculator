@@ -18,7 +18,7 @@ for (item of buttons) {
         }
         else if (buttonText == '=') {
             result.innerHTML=screen.value;
-            screen.value = eval(screenValue);
+            screen.value = eval(screen.value);
         }
         else if (buttonText == '÷') {
             buttonText = '/';
@@ -34,6 +34,11 @@ for (item of buttons) {
             buttonText = '-';
             screenValue += buttonText;
             screen.value = screenValue;
+        }
+        else if (buttonText == '⋅') {
+            buttonText='.';
+            screenValue+=buttonText;
+            screen.value=screenValue;
         }
         else {
             screenValue += buttonText;
